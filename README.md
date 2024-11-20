@@ -48,7 +48,7 @@ Is it possible to build a model for multi-class classification of immune system 
 6. I have merge both cholangitis-related diseases into single label. Primary sclerosing cholangitis and Primary biliary cholangitis are very simillar diseases and I have made decision to not differentiate between them.
 7. In the real dataset there are very few donors for some diseases, which makes it hard to split data, as the split need to go along donor_id, the dataset with fake cells was also augmented to have more donor_ids by splitting original donors and randomly sampling cells from them and backfilling them with augmented and fake cells.
 8. During Test/Train split, an effort was made to split cells along donor IDs and then guearantee 500 cells for each disease
-9. Becasue training on the full dataset required prohibitive computer resources for dataset with fake cells I have used only 5% of the entire set and for dataset with real cells I have used 10% of the dataset.
+9. Becasue training on the full dataset required prohibitive computer resources for dataset with fake cells I have used only 2% of the entire set and for dataset with real cells I have used 10% of the dataset.
 
 ## Analysis:
 I have compared following models for multi-class classification task:
