@@ -72,7 +72,7 @@ I have recorded:
 4. Weighted average recall
 5. Weighted average F-1 score
 6. Weighted average ROC AUC
-7. Trainig time
+7. Traiing time
 
 During randomized search cross-validation, the target metric was recall. High recall ensures that most true disease cases are detected, which is crucial for minimizing the risk of overlooking patients who require medical attention.
 
@@ -91,11 +91,11 @@ During randomized search cross-validation, the target metric was recall. High re
 ![](images/conf_logreg_nobias.png)
 
 ## Observations:
-1. Logistic regression and Linear kernel SVC achieved the best results from the perspective of recall, precision, and consequently F-1 score
-2. Logisitc regression scales better than LinearSVC with the size of the dataset, considering that they produce similar results, Logisitc regression would be preferable for further expanding the model
-3. The best models (Logistic Regression and SVC) for dataset without cell type bias struggle with localized sleroderma and type 1 diabetes, they also are the models with fewest donors, it is anticipated that accuracy of the prediction would increase with more patients in training. 
+1. Logistic regression achieved the best results from the perspective of recall, precision, and consequently F-1 score.
+2. Logisitc regression scales better than LinearSVC with the size of dataset.
+3. The best model (Logistic Regression) for dataset without cell type bias struggle with localized sleroderma and type 1 diabetes. These diseases also have the fewest donors, it is anticipated that accuracy of the prediction would increase with more patients in training. 
 
 ## Future Directions:
-1. Very few cells have been used in training due to resource limits, a more deeper training would yield better results.
-2. Current model performs inferences per cell, wheras multiple cells are available per patient, a model that could take multiple per cell predictions and use them for majority voting would give better results.
+1. Very few cells have been used in training due to resource limits, a deeper training would yield better results.
+2. Current model performs inferences per cell, wheras multiple cells are available per patient, a model that could take multiple cells per prediction and use them for majority voting would give better results.
 3. Current model does not predict whether patient is healthy, it would be critical to include healthy donors for each disease.
