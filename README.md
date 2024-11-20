@@ -76,6 +76,12 @@ I have recorded:
 
 During randomized search cross-validation, the target metric was recall. High recall ensures that most true disease cases are detected, which is crucial for minimizing the risk of overlooking patients who require medical attention.
 
+## Number of donors per disease in the training set
+![](images/training_ids.png)
+
+## Number of cells per disease in the training set
+![](images/training_cells.png)
+
 ## Summary of all models:
 ![](images/models.png)
 
@@ -89,11 +95,7 @@ During randomized search cross-validation, the target metric was recall. High re
 2. Logisitc regression scales better than LinearSVC with the size of the dataset, considering that they produce similar results, Logisitc regression would be preferable for further expanding the model
 3. The best models (Logistic Regression and SVC) for dataset without cell type bias struggle with localized sleroderma and type 1 diabetes, they also are the models with fewest donors, it is anticipated that accuracy of the prediction would increase with more patients in training. 
 
-#### Number of donors per disease in the training set
-![](images/training_ids.png)
-#### Number of cells per disease in the training set
-![](images/training_cells.png)
-
 ## Future Directions:
-1. Current model performs inferences per cell, wheras multiple cells are available per patient, a model that could take multiple per cell predictions and use them for majority voting would give better results.
-2. Current model does not predict whether patient is healthy, it would be critical to include healthy donors for each disease.
+1. Very few cells have been used in training due to resource limits, a more deeper training would yield better results.
+2. Current model performs inferences per cell, wheras multiple cells are available per patient, a model that could take multiple per cell predictions and use them for majority voting would give better results.
+3. Current model does not predict whether patient is healthy, it would be critical to include healthy donors for each disease.
